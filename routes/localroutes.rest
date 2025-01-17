@@ -1,0 +1,29 @@
+GET http://localhost:8001/students
+
+###
+
+GET http://localhost:8001/students/1234
+
+###
+
+POST http://localhost:8001/students
+Content-Type: application/json
+
+{
+    "name": "Nataliya",
+    "class": "DWA"
+}
+
+###
+
+DELETE http://localhost:8001/students/678a002b6373571b566cce41
+
+###
+
+PATCH http://localhost:8001/students/678a002b6373571b566cce41
+Content-Type: application/json
+
+{
+    "name": "Nataliya Tsytovych",
+    "class": "DWA"
+}
