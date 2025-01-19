@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 8001;
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.DATABASE_URL; // MongoDB connection URL
 
 // Connect to MongoDB
 mongoose.connect(DATABASE_URL, {
@@ -20,7 +20,7 @@ db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Database Connection Established"));
 
 // Middleware
-app.use(cors({ origin: "https://awdcrudapi-8114b17bc334.herokuapp.com" }));
+app.use(cors({ origin: "https://awdcrudapi-8114b17bc334.herokuapp.com" })); // Frontend URL
 app.use(express.json());
 
 // API Routes
