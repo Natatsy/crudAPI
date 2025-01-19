@@ -20,7 +20,7 @@ db.on("error", (error) => console.error(error));
 db.once("open", () => console.log("Database Connection Established"));
 
 // Middleware
-app.use(cors({ origin: "https://your-frontend-domain.com" })); // Update with your frontend's domain
+app.use(cors({ origin: "https://awdcrudapi-8114b17bc334.herokuapp.com" }));
 app.use(express.json());
 
 // API Routes
